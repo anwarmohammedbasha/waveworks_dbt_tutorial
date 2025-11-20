@@ -43,5 +43,14 @@ Contents
 
 If a command fails, read the error and adjust `profiles.yml` path to the `waveworks.db` file location.
 
+---
+
+📄 Blog Post About This Project
+
+I wrote a beginner-friendly Medium article explaining this project, how dbt works, and how the pieces fit together:
+
+👉 Getting Started with dbt Using DuckDB
+https://medium.com/@anwarmohammedbasha/getting-started-with-dbt-using-duckdb-3c6e0de774ae
+
 Good luck — this project is intentionally small so you can read the SQL files and learn how dbt organizes work.
 
