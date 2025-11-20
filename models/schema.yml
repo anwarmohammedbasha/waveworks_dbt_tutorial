@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "models": [
+    {
+      "name": "stg_products",
+      "description": "Model created for demo (stg_products)"
+    },
+    {
+      "name": "stg_branches",
+      "description": "Model created for demo (stg_branches)"
+    },
+    {
+      "name": "stg_customers",
+      "description": "Model created for demo (stg_customers)"
+    },
+    {
+      "name": "stg_purchases",
+      "description": "Model created for demo (stg_purchases)"
+    },
+    {
+      "name": "stg_orders",
+      "description": "Model created for demo (stg_orders)"
+    },
+    {
+      "name": "stg_order_items",
+      "description": "Model created for demo (stg_order_items)"
+    },
+    {
+      "name": "mart_customers_orders",
+      "description": "Model created for demo (mart_customers_orders)"
+    }
+  ]
+}

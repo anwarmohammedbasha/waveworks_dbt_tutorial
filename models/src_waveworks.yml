@@ -1,0 +1,10 @@
+version: 2
+sources:
+  - name: waveworks_raw
+    tables:
+      - name: products
+      - name: branches
+      - name: customers
+      - name: purchases
+      - name: orders
+      - name: order_items

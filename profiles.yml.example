@@ -1,0 +1,8 @@
+waveworks_profile:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      threads: 1
+      database: /absolute/path/to/waveworks.db   # <- change this to the absolute path of waveworks.db on your machine
+      schema: main    # DuckDB uses 'main' by default for sqlite-style files

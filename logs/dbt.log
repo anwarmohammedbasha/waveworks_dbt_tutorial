@@ -1,0 +1,206 @@
+[0m12:58:52.195666 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000238D7DF96A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000238D88FC690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000238D8F7FED0>]}
+
+
+============================== 12:58:52.217504 | 562a3c32-48bb-4a26-9c7d-9b647829693d ==============================
+[0m12:58:52.217504 [info ] [MainThread]: Running with dbt=1.10.15
+[0m12:58:52.219706 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\anwar\\.dbt', 'write_json': 'True', 'use_colors': 'True', 'warn_error': 'None', 'static_parser': 'True', 'partial_parse': 'True', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': 'logs', 'version_check': 'True', 'use_experimental_parser': 'False', 'introspect': 'True', 'quiet': 'False', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'no_print': 'None', 'invocation_command': 'dbt debug', 'printer_width': '80', 'target_path': 'None'}
+[0m12:58:52.289260 [info ] [MainThread]: dbt version: 1.10.15
+[0m12:58:52.290830 [info ] [MainThread]: python version: 3.13.5
+[0m12:58:52.291754 [info ] [MainThread]: python path: E:\PyCharm Projects\waveworks_dbt_tutorial\.venv\Scripts\python.exe
+[0m12:58:52.292728 [info ] [MainThread]: os info: Windows-11-10.0.26100-SP0
+[0m12:58:53.535178 [info ] [MainThread]: Using profiles dir at C:\Users\anwar\.dbt
+[0m12:58:53.536634 [info ] [MainThread]: Using profiles.yml file at C:\Users\anwar\.dbt\profiles.yml
+[0m12:58:53.537998 [info ] [MainThread]: Using dbt_project.yml file at E:\PyCharm Projects\waveworks_dbt_tutorial\dbt_project.yml
+[0m12:58:53.539477 [info ] [MainThread]: Configuration:
+[0m12:58:53.540556 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m12:58:53.541600 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m12:58:53.542732 [info ] [MainThread]: Required dependencies:
+[0m12:58:53.543890 [debug] [MainThread]: Executing "git --help"
+[0m12:58:53.722246 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m12:58:53.724134 [debug] [MainThread]: STDERR: "b''"
+[0m12:58:53.726104 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m12:58:53.727462 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m12:58:53.729060 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m12:58:53.730402 [info ] [MainThread]: Could not load dbt_project.yml
+Profile loading failed for the following reason:
+Runtime Error
+  Credentials in profile "waveworks_profile", target "dev" invalid: Runtime Error
+    Inconsistency detected between 'path' and 'database' fields in profile; the 'database' property must be set to 'memory' to match the 'path'
+
+
+[0m12:58:53.731787 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <E:\PyCharm Projects\waveworks_dbt_tutorial\dbt_project.yml> not found
+
+[0m12:58:53.733886 [debug] [MainThread]: Command `dbt debug` failed at 12:58:53.733563 after 2.33 seconds
+[0m12:58:53.734807 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000238DA126FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000238D8EDF770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000238D9FC6360>]}
+[0m12:58:53.735748 [debug] [MainThread]: Flushing usage events
+[0m12:58:56.428741 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:01:07.949531 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023104AC4C20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000231055A0050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023105BD7ED0>]}
+
+
+============================== 13:01:07.963105 | 00f69566-82d5-45e5-957a-6547143e4151 ==============================
+[0m13:01:07.963105 [info ] [MainThread]: Running with dbt=1.10.15
+[0m13:01:07.965079 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'log_format': 'default', 'write_json': 'True', 'invocation_command': 'dbt debug', 'printer_width': '80', 'warn_error': 'None', 'static_parser': 'True', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'log_path': 'logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'version_check': 'True', 'use_experimental_parser': 'False', 'quiet': 'False', 'introspect': 'True', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'profiles_dir': 'C:\\Users\\anwar\\.dbt', 'use_colors': 'True', 'cache_selected_only': 'False', 'target_path': 'None'}
+[0m13:01:08.020309 [info ] [MainThread]: dbt version: 1.10.15
+[0m13:01:08.022011 [info ] [MainThread]: python version: 3.13.5
+[0m13:01:08.023638 [info ] [MainThread]: python path: E:\PyCharm Projects\waveworks_dbt_tutorial\.venv\Scripts\python.exe
+[0m13:01:08.025195 [info ] [MainThread]: os info: Windows-11-10.0.26100-SP0
+[0m13:01:09.312214 [info ] [MainThread]: Using profiles dir at C:\Users\anwar\.dbt
+[0m13:01:09.313885 [info ] [MainThread]: Using profiles.yml file at C:\Users\anwar\.dbt\profiles.yml
+[0m13:01:09.315309 [info ] [MainThread]: Using dbt_project.yml file at E:\PyCharm Projects\waveworks_dbt_tutorial\dbt_project.yml
+[0m13:01:09.323086 [info ] [MainThread]: adapter type: duckdb
+[0m13:01:09.324463 [info ] [MainThread]: adapter version: 1.10.0
+[0m13:01:09.325937 [info ] [MainThread]: Configuration:
+[0m13:01:09.327584 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m13:01:09.329743 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m13:01:09.331514 [info ] [MainThread]: Required dependencies:
+[0m13:01:09.333206 [debug] [MainThread]: Executing "git --help"
+[0m13:01:09.462135 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m13:01:09.463085 [debug] [MainThread]: STDERR: "b''"
+[0m13:01:09.464150 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m13:01:09.465269 [info ] [MainThread]: Connection:
+[0m13:01:09.466342 [info ] [MainThread]:   database: waveworks
+[0m13:01:09.467311 [info ] [MainThread]:   schema: main
+[0m13:01:09.468189 [info ] [MainThread]:   path: E:/PyCharm Projects/waveworks_dbt_tutorial/waveworks.db
+[0m13:01:09.469053 [info ] [MainThread]:   config_options: None
+[0m13:01:09.470002 [info ] [MainThread]:   extensions: None
+[0m13:01:09.470933 [info ] [MainThread]:   settings: {}
+[0m13:01:09.472658 [info ] [MainThread]:   external_root: .
+[0m13:01:09.474226 [info ] [MainThread]:   use_credential_provider: None
+[0m13:01:09.475715 [info ] [MainThread]:   attach: None
+[0m13:01:09.477034 [info ] [MainThread]:   filesystems: None
+[0m13:01:09.478600 [info ] [MainThread]:   remote: None
+[0m13:01:09.479938 [info ] [MainThread]:   plugins: None
+[0m13:01:09.481396 [info ] [MainThread]:   disable_transactions: False
+[0m13:01:09.483010 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m13:01:10.208115 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m13:01:10.429108 [debug] [MainThread]: Using duckdb connection "debug"
+[0m13:01:10.430064 [debug] [MainThread]: On debug: select 1 as id
+[0m13:01:10.430829 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:01:10.477763 [debug] [MainThread]: SQL status: OK in 0.047 seconds
+[0m13:01:10.480343 [debug] [MainThread]: On debug: Close
+[0m13:01:10.481400 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m13:01:10.482541 [info ] [MainThread]: [31m1 check failed:[0m
+[0m13:01:10.483726 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <E:\PyCharm Projects\waveworks_dbt_tutorial\dbt_project.yml> not found
+
+[0m13:01:10.486337 [debug] [MainThread]: Command `dbt debug` failed at 13:01:10.485988 after 3.08 seconds
+[0m13:01:10.487176 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m13:01:10.488438 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023106F17E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023106F5E9F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023106E2DBF0>]}
+[0m13:01:10.489450 [debug] [MainThread]: Flushing usage events
+[0m13:01:12.906400 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:05:11.703094 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002209FF04C20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220A09E0050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220A101FD90>]}
+
+
+============================== 13:05:11.715866 | 9561e125-0b64-4f22-96da-5486618ea29f ==============================
+[0m13:05:11.715866 [info ] [MainThread]: Running with dbt=1.10.15
+[0m13:05:11.717733 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'use_colors': 'True', 'no_print': 'None', 'printer_width': '80', 'profiles_dir': 'C:\\Users\\anwar\\.dbt', 'warn_error': 'None', 'log_path': 'E:\\PyCharm Projects\\waveworks_dbt_tutorial\\logs', 'partial_parse': 'True', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'version_check': 'True', 'use_experimental_parser': 'False', 'introspect': 'True', 'quiet': 'False', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'log_format': 'default', 'invocation_command': 'dbt debug', 'cache_selected_only': 'False', 'target_path': 'None'}
+[0m13:05:11.769458 [info ] [MainThread]: dbt version: 1.10.15
+[0m13:05:11.770746 [info ] [MainThread]: python version: 3.13.5
+[0m13:05:11.771952 [info ] [MainThread]: python path: E:\PyCharm Projects\waveworks_dbt_tutorial\.venv\Scripts\python.exe
+[0m13:05:11.773158 [info ] [MainThread]: os info: Windows-11-10.0.26100-SP0
+[0m13:05:12.050797 [info ] [MainThread]: Using profiles dir at C:\Users\anwar\.dbt
+[0m13:05:12.051936 [info ] [MainThread]: Using profiles.yml file at C:\Users\anwar\.dbt\profiles.yml
+[0m13:05:12.053126 [info ] [MainThread]: Using dbt_project.yml file at E:\PyCharm Projects\waveworks_dbt_tutorial\dbt_project.yml
+[0m13:05:12.057524 [info ] [MainThread]: adapter type: duckdb
+[0m13:05:12.058675 [info ] [MainThread]: adapter version: 1.10.0
+[0m13:05:12.068339 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `source-paths` config has been renamed to `model-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m13:05:12.070339 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '9561e125-0b64-4f22-96da-5486618ea29f', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220A21F6780>]}
+[0m13:05:12.072718 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `data-paths` config has been renamed to `seed-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m13:05:12.074449 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '9561e125-0b64-4f22-96da-5486618ea29f', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220A210E9C0>]}
+[0m13:05:12.308403 [info ] [MainThread]: Configuration:
+[0m13:05:12.309765 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m13:05:12.310855 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m13:05:12.311833 [info ] [MainThread]: Required dependencies:
+[0m13:05:12.312837 [debug] [MainThread]: Executing "git --help"
+[0m13:05:12.425301 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m13:05:12.426559 [debug] [MainThread]: STDERR: "b''"
+[0m13:05:12.427877 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m13:05:12.429218 [info ] [MainThread]: Connection:
+[0m13:05:12.430355 [info ] [MainThread]:   database: waveworks
+[0m13:05:12.431270 [info ] [MainThread]:   schema: main
+[0m13:05:12.432225 [info ] [MainThread]:   path: E:/PyCharm Projects/waveworks_dbt_tutorial/waveworks.db
+[0m13:05:12.433152 [info ] [MainThread]:   config_options: None
+[0m13:05:12.434086 [info ] [MainThread]:   extensions: None
+[0m13:05:12.435025 [info ] [MainThread]:   settings: {}
+[0m13:05:12.435925 [info ] [MainThread]:   external_root: .
+[0m13:05:12.436854 [info ] [MainThread]:   use_credential_provider: None
+[0m13:05:12.437806 [info ] [MainThread]:   attach: None
+[0m13:05:12.438834 [info ] [MainThread]:   filesystems: None
+[0m13:05:12.439818 [info ] [MainThread]:   remote: None
+[0m13:05:12.440748 [info ] [MainThread]:   plugins: None
+[0m13:05:12.441783 [info ] [MainThread]:   disable_transactions: False
+[0m13:05:12.443759 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m13:05:13.065617 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m13:05:13.206225 [debug] [MainThread]: Using duckdb connection "debug"
+[0m13:05:13.207009 [debug] [MainThread]: On debug: select 1 as id
+[0m13:05:13.207572 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:05:13.244458 [debug] [MainThread]: SQL status: OK in 0.037 seconds
+[0m13:05:13.246541 [debug] [MainThread]: On debug: Close
+[0m13:05:13.247313 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m13:05:13.248462 [info ] [MainThread]: [32mAll checks passed![0m
+[0m13:05:13.249974 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- ConfigSourcePathDeprecation: 1 occurrence
+- ConfigDataPathDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m13:05:13.252002 [debug] [MainThread]: Command `dbt debug` succeeded at 13:05:13.251703 after 1.97 seconds
+[0m13:05:13.252851 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m13:05:13.253550 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220A2669050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220A2669650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220A103C050>]}
+[0m13:05:13.254406 [debug] [MainThread]: Flushing usage events
+[0m13:05:15.602495 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:05:36.000368 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DFC9224C20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DFC9D00050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DFCA347D90>]}
+
+
+============================== 13:05:36.011126 | 3ca13a38-b156-4e06-b4d8-35a6881f1fdc ==============================
+[0m13:05:36.011126 [info ] [MainThread]: Running with dbt=1.10.15
+[0m13:05:36.012920 [debug] [MainThread]: running dbt with arguments {'profiles_dir': 'C:\\Users\\anwar\\.dbt', 'printer_width': '80', 'use_colors': 'True', 'log_format': 'default', 'target_path': 'None', 'warn_error': 'None', 'static_parser': 'True', 'fail_fast': 'False', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'log_path': 'E:\\PyCharm Projects\\waveworks_dbt_tutorial\\logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'version_check': 'True', 'use_experimental_parser': 'False', 'introspect': 'True', 'quiet': 'False', 'empty': 'False', 'log_cache_events': 'False', 'debug': 'False', 'no_print': 'None', 'invocation_command': 'dbt run', 'cache_selected_only': 'False', 'write_json': 'True'}
+[0m13:05:36.321345 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `source-paths` config has been renamed to `model-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m13:05:36.322990 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '3ca13a38-b156-4e06-b4d8-35a6881f1fdc', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DFCA3796E0>]}
+[0m13:05:36.324487 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `data-paths` config has been renamed to `seed-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m13:05:36.326234 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '3ca13a38-b156-4e06-b4d8-35a6881f1fdc', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DFCA1DBBD0>]}
+[0m13:05:36.664136 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3ca13a38-b156-4e06-b4d8-35a6881f1fdc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DFCB47A050>]}
+[0m13:05:36.812583 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3ca13a38-b156-4e06-b4d8-35a6881f1fdc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DFC9C3A300>]}
+[0m13:05:36.817166 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m13:05:37.452267 [debug] [MainThread]: checksum: 14a228079bd6df63ba81633f9a3cf44ecfaa31056ac397c602753ec895dbf885, vars: {}, profile: , target: , version: 1.10.15
+[0m13:05:37.455116 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m13:05:37.456590 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '3ca13a38-b156-4e06-b4d8-35a6881f1fdc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DFCB69A270>]}
+[0m13:05:39.711300 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3ca13a38-b156-4e06-b4d8-35a6881f1fdc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DFCB80B2B0>]}
+[0m13:05:39.828232 [debug] [MainThread]: Wrote artifact WritableManifest to E:\PyCharm Projects\waveworks_dbt_tutorial\target\manifest.json
+[0m13:05:39.837635 [debug] [MainThread]: Wrote artifact SemanticManifest to E:\PyCharm Projects\waveworks_dbt_tutorial\target\semantic_manifest.json
+[0m13:05:39.968565 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3ca13a38-b156-4e06-b4d8-35a6881f1fdc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DFCB892090>]}
+[0m13:05:39.969684 [info ] [MainThread]: Found 468 macros
+[0m13:05:39.971660 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3ca13a38-b156-4e06-b4d8-35a6881f1fdc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DFCB936150>]}
+[0m13:05:39.975203 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m13:05:39.976995 [debug] [MainThread]: Command end result
+[0m13:05:40.029846 [debug] [MainThread]: Wrote artifact WritableManifest to E:\PyCharm Projects\waveworks_dbt_tutorial\target\manifest.json
+[0m13:05:40.035921 [debug] [MainThread]: Wrote artifact SemanticManifest to E:\PyCharm Projects\waveworks_dbt_tutorial\target\semantic_manifest.json
+[0m13:05:40.045966 [debug] [MainThread]: Wrote artifact RunExecutionResult to E:\PyCharm Projects\waveworks_dbt_tutorial\target\run_results.json
+[0m13:05:40.047435 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- ConfigSourcePathDeprecation: 1 occurrence
+- ConfigDataPathDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m13:05:40.049920 [debug] [MainThread]: Command `dbt run` succeeded at 13:05:40.049318 after 4.41 seconds
+[0m13:05:40.051518 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DFCB8C7570>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DFCB8AC0E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DFC7286C50>]}
+[0m13:05:40.053264 [debug] [MainThread]: Flushing usage events
+[0m13:05:42.226748 [debug] [MainThread]: An error was encountered while trying to flush usage events

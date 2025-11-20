@@ -1,0 +1,53 @@
+Detected DB type: sqlite
+Tables found: ['products', 'branches', 'customers', 'purchases', 'orders', 'order_items']
+
+Sample rows (up to 5 per table):
+
+Table: products
+Columns: ['product_id', 'sku', 'name', 'category', 'unit_price', 'units_per_box']
+Rows:
+  (1, 'WW-0001', 'System', 'Accessories', 356.29, 5)
+  (2, 'WW-0002', 'Nice', 'Accessories', 189.6, 1)
+  (3, 'WW-0003', 'Health', 'Electronics', 318.47, 20)
+  (4, 'WW-0004', 'Claim', 'Office', 210.76, 5)
+  (5, 'WW-0005', 'Stuff', 'Apparel', 374.04, 20)
+
+Table: branches
+Columns: ['branch_id', 'name', 'region']
+Rows:
+  (1, 'Branch 1', 'North')
+  (2, 'Branch 2', 'South')
+  (3, 'Branch 3', 'East')
+  (4, 'Branch 4', 'West')
+  (5, 'Branch 5', 'Central')
+
+Table: customers
+Columns: ['customer_id', 'name', 'channel']
+Rows:
+  (1, 'Jeanne Olson', 'ecommerce')
+  (2, 'Todd Hardin', 'ecommerce')
+  (3, 'Juan Miller', 'ecommerce')
+  (4, 'Mr. Stephen Newton', 'ecommerce')
+  (5, 'Amanda Pittman', 'wholesale')
+
+Table: purchases
+Columns: ['purchase_id', 'product_id', 'supplier', 'qty', 'cost_per_unit', 'purchase_date', 'branch_id']
+Rows:
+
+Table: orders
+Columns: ['order_id', 'customer_id', 'order_datetime', 'total_amount']
+Rows:
+  (1, 173, '2025-09-16T20:45:00', 970.22)
+  (2, 112, '2025-09-16T05:43:00', 975.16)
+  (3, 6, '2025-09-16T13:34:00', 1223.46)
+  (4, 135, '2025-09-16T20:26:00', 3431.75)
+  (5, 155, '2025-09-16T06:26:00', 1608.38)
+
+Table: order_items
+Columns: ['order_item_id', 'order_id', 'product_id', 'qty', 'unit_price']
+Rows:
+  (1, 1, 25, 2, 196.34)
+  (2, 1, 40, 1, 56.89)
+  (3, 1, 19, 1, 229.26)
+  (4, 1, 47, 3, 97.13)
+  (5, 2, 18, 4, 243.79)
