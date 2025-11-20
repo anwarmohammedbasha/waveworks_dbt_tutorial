@@ -1,6 +1,8 @@
-version: 2
+﻿version: 2
+
 sources:
   - name: waveworks_raw
+    schema: main
     tables:
       - name: products
       - name: branches

@@ -1,56 +1,128 @@
-# waveworks_dbt_tutorial
+# 🚀 Waveworks dbt + DuckDB Project
 
-This is a **beginner-friendly dbt project** that demonstrates how to use dbt with DuckDB and a local database file.
-
-Contents
-- `README.md` – this file (quick start + commands)
-- `models/` – example dbt models (staging + marts)
-- `profiles.yml.example` – example dbt profile for DuckDB
-- `dbt_project.yml` – dbt project config
-- `.gitignore` – recommended ignore file
-
-**Goal:** unzip this project, follow the Quick Start in the README, and run a few `dbt` commands to see transforms.
+A simple beginner-friendly **dbt (data build tool)** project using **DuckDB** as the analytical database.
+This project transforms raw Waveworks data into clean staging models and a final customer analytics mart.
 
 ---
 
-## Quick Start (short)
-1. Install Python 3.8+ and pip.
-2. Create and activate a virtual environment (recommended):
-   ```bash
-   python -m venv .venv
-   source .venv/bin/activate   # macOS / Linux
-   .venv\Scripts\activate    # Windows PowerShell
-   ```
-3. Install dbt and the DuckDB adapter:
-   ```bash
-   pip install dbt-core dbt-duckdb
-   ```
-4. Copy the `profiles.yml.example` to your dbt profiles location:
-   - Linux/macOS: `~/.dbt/profiles.yml`
-   - Windows: `%USERPROFILE%\.dbt\profiles.yml`
-5. Place the provided `waveworks.db` file in the same folder you point DuckDB to (see `profiles.yml.example`).
-6. From the project root (where this README is), run:
-   ```bash
-   dbt deps         # if you add packages later
-   dbt debug        # checks connection
-   dbt run          # build models
-   dbt test         # run tests
-   dbt docs generate
-   dbt docs serve    # view documentation in browser
-   ```
+## 📘 Overview
+
+This project demonstrates:
+
+* Setting up **dbt with DuckDB**
+* Creating **staging models** from raw tables
+* Creating a **mart model** for analytics
+* Running dbt locally
+* Understanding dbt folder structure
 
 ---
 
-If a command fails, read the error and adjust `profiles.yml` path to the `waveworks.db` file location.
+## 📁 Project Structure
+
+```
+.
+├── models/
+│   ├── staging/
+│   │   ├── stg_branches.sql
+│   │   ├── stg_customers.sql
+│   │   ├── stg_orders.sql
+│   │   ├── stg_order_items.sql
+│   │   ├── stg_products.sql
+│   │   └── stg_purchases.sql
+│   ├── mart_customers_orders.sql
+│   └── schema.yml
+│
+├── data/
+│   └── waveworks.duckdb
+│
+├── dbt_project.yml
+└── README.md
+```
 
 ---
 
-📄 Blog Post About This Project
+## 🧠 Final Model: `mart_customers_orders`
 
-I wrote a beginner-friendly Medium article explaining this project, how dbt works, and how the pieces fit together:
+This model aggregates customer behavior and order patterns.
 
-👉 Getting Started with dbt Using DuckDB
-https://medium.com/@anwarmohammedbasha/getting-started-with-dbt-using-duckdb-3c6e0de774ae
+### Columns included:
 
-Good luck — this project is intentionally small so you can read the SQL files and learn how dbt organizes work.
+* `customer_key`
+* `name`
+* `channel`
+* `orders_count`
+* `first_order_at`
+* `last_order_at`
+* `total_spend`
+
+### SQL:
+
+```sql
+{{ config(materialized='table') }}
+
+select
+  c.customer_id as customer_key,
+  c.name,
+  c.channel,
+  count(o.order_id) as orders_count,
+  min(o.order_datetime) as first_order_at,
+  max(o.order_datetime) as last_order_at,
+  sum(o.total_amount) as total_spend
+from {{ ref('stg_customers') }} as c
+left join {{ ref('stg_orders') }} as o
+  on o.customer_id = c.customer_id
+group by
+  c.customer_id,
+  c.name,
+  c.channel
+```
+
+---
+
+## ▶️ How to Run
+
+### 1️⃣ Create virtual environment
+
+```
+python -m venv .venv
+```
+
+### 2️⃣ Activate it
+
+```
+.venv\Scripts\activate   # Windows
+```
+
+### 3️⃣ Install dbt
+
+```
+pip install dbt-core dbt-duckdb
+```
+
+### 4️⃣ Run dbt
+
+```
+dbt debug
+dbt clean
+dbt run
+dbt test
+```
+
+---
+
+## 🧪 Testing
+
+Run model tests:
+
+```
+dbt test
+```
+
+---
+
+## 📝 Blog Article
+
+Full walkthrough available here:
+
+👉 **[https://medium.com/@anwarmohammedbasha/getting-started-with-dbt-using-duckdb-3c6e0de774ae](https://medium.com/@anwarmohammedbasha/getting-started-with-dbt-using-duckdb-3c6e0de774ae)**
 

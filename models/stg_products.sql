@@ -1,5 +1,7 @@
--- models/stg_products.sql
+﻿-- models/stg_products.sql
 {{ config(materialized='view') }}
 
 select *
-from { source('waveworks_raw', 'products') }
+from {{ source('waveworks_raw', 'products') }}
+
+
